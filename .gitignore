@@ -1,0 +1,8 @@
+.idea/
+.vscode/
+bower_components/
+node_modules/
+licenses/*
+yarn-error.log
+yarn.lock
+package-lock.json
