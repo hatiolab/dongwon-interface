@@ -20,7 +20,7 @@ export function init({
 
   var sceneName = searchParams.get("scene");
   var keepingTime =
-    new URL(window.location.href).searchParams.get("time") || 30;
+    new URL(window.location.href).searchParams.get("interval") || 30;
   var list = sceneName.split(/\s*,\s*/);
   var viewers = [];
   var token = searchParams.get("token");
