@@ -1,98 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <style>
-      body,
-      html {
-        width: 100%;
-        height: 100%;
-        border: none;
-        margin: 0;
-      }
 
-      .scene-viewer {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        /* width: 600px;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin: 0;
+    }
+
+    .scene-viewer {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      /* width: 600px;
         height: 400px; */
-      }
+    }
 
-      #splash {
-        background-color: #cccccc;
-        font-size: 30px;
-        font-weight: bold;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    </style>
-  </head>
+    #splash {
+      background-color: #cccccc;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
 
-  <body>
-    <div id="splash">
-      now loading...
-    </div>
+<body>
+  <div id="splash">
+    now loading...
+  </div>
 
-    <script src="node_modules/@babel/polyfill/dist/polyfill.min.js"></script>
-    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-    <script src="/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+  <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+  <script src="/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
 
-    <script src="node_modules/webfontloader/webfontloader.js"></script>
-    <script src="node_modules/sockjs-client/dist/sockjs.min.js"></script>
-    <script src="node_modules/stomp-websocket/lib/stomp.min.js"></script>
+  <script src="node_modules/webfontloader/webfontloader.js"></script>
+  <script src="node_modules/sockjs-client/dist/sockjs.min.js"></script>
+  <script src="node_modules/stomp-websocket/lib/stomp.min.js"></script>
 
-    <script src="node_modules/@hatiolab/things-scene/things-scene-ie.js"></script>
-    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-    <script src="node_modules/tinycolor2/dist/tinycolor-min.js"></script>
-    <script src="node_modules/@things-scene/chartjs/dist/things-scene-chartjs-ie.js"></script>
-    <script src="node_modules/@things-scene/clock/dist/things-scene-clock-ie.js"></script>
-    <script src="node_modules/@things-scene/clone/dist/things-scene-clone-ie.js"></script>
-    <script src="node_modules/@things-scene/echart/dist/things-scene-echart-ie.js"></script>
-    <script src="node_modules/@things-scene/firebase/dist/things-scene-firebase-ie.js"></script>
-    <script src="node_modules/@things-scene/forklift/dist/things-scene-forklift-ie.js"></script>
-    <script src="node_modules/@things-scene/form/dist/things-scene-form-ie.js"></script>
-    <script src="node_modules/@things-scene/gauge/dist/things-scene-gauge-ie.js"></script>
-    <script src="node_modules/@things-scene/google-map/dist/things-scene-google-map-ie.js"></script>
-    <script src="node_modules/@things-scene/half-roundrect/dist/things-scene-half-roundrect-ie.js"></script>
-    <script src="node_modules/@things-scene/indoor-map/dist/things-scene-indoor-map-ie.js"></script>
-    <script src="node_modules/@things-scene/legend/dist/things-scene-legend-ie.js"></script>
-    <script src="node_modules/@things-scene/marker/dist/things-scene-marker-ie.js"></script>
-    <script src="node_modules/@things-scene/mqtt/dist/things-scene-mqtt-ie.js"></script>
-    <script src="node_modules/@things-scene/person/dist/things-scene-person-ie.js"></script>
-    <script src="node_modules/@things-scene/progressbar/dist/things-scene-progressbar-ie.js"></script>
-    <script src="node_modules/@things-scene/random/dist/things-scene-random-ie.js"></script>
-    <script src="node_modules/@things-scene/restful/dist/things-scene-restful-ie.js"></script>
-    <script src="node_modules/@things-scene/slam/dist/things-scene-slam-ie.js"></script>
-    <script src="node_modules/@things-scene/stomp/dist/things-scene-stomp-ie.js"></script>
-    <script src="node_modules/@things-scene/tab/dist/things-scene-tab-ie.js"></script>
-    <script src="node_modules/@things-scene/table/dist/things-scene-table-ie.js"></script>
-    <script src="node_modules/@things-scene/traffic/dist/things-scene-traffic-ie.js"></script>
-    <script src="node_modules/@things-scene/visualizer/dist/things-scene-visualizer-ie.js"></script>
-    <script src="node_modules/@things-scene/wheel-sorter/dist/things-scene-wheel-sorter-ie.js"></script>
-    <script src="node_modules/@things-scene/things-board-integration/things-board-integration-min.js"></script>
+  <script src="node_modules/@hatiolab/things-scene/things-scene-ie.js"></script>
+  <script src="node_modules/@things-scene/things-board-integration/things-board-integration-min.js"></script>
+  <script src="node_modules/@things-shell/board-bundler/dist/board-bundle.js"></script>
+  <script src="./dist/main.js"></script>
+  <script src="./licenses/things-lic.js"></script>
 
-    <script src="./dist/main.js"></script>
-    <script src="./licenses/things-lic.js"></script>
+  <script>
+    var ThingsLicense = window.ThingsLicense || ''
+    init({
+      authorizationKey: "tokenuser",
+      withCredentials: true,
+      baseURL: 'https://deadpool.hatiolab.com/rest',
+      queryString: location.search,
+      license: ThingsLicense
+    })
+  </script>
+</body>
 
-    <script>
-      var ThingsLicense = window.ThingsLicense || "";
-      init({
-        baseURL: "http://10.200.151.226/rest",
-        queryString: location.search,
-        license: ThingsLicense
-      });
-    </script>
-  </body>
 </html>
